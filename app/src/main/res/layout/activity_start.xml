@@ -4,84 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activities.StartActivity">
+    tools:context=".presentation.view.activity.StartActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/serverIpFirstET"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text="192"
-            android:textAlignment="center"
-            android:textSize="30sp" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="."
-            android:textSize="30sp" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/server_ip_first_edit_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/server_ip_second_edit_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/server_ip_third_edit_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/server_ip_fourth_edit_text"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+        </LinearLayout>
 
         <EditText
-            android:id="@+id/serverIpSecondET"
-            android:layout_width="60dp"
+            android:id="@+id/server_port_edit_text"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:inputType="number"
-            android:text="168"
             android:textAlignment="center"
             android:textSize="30sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="."
-            android:textSize="30sp" />
-
-        <EditText
-            android:id="@+id/serverIpThirdET"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text="1"
-            android:textAlignment="center"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="."
-            android:textSize="30sp" />
-
-        <EditText
-            android:id="@+id/serverIpFourthET"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/full_round_button"
+            app:srcCompat="@drawable/ic_next" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/serverPortET"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:inputType="number"
-        android:text="1337"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
 
-    <ImageButton
-        android:id="@+id/nextButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/full_round_button"
-        app:srcCompat="@drawable/ic_next" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/logs_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8" />
 </LinearLayout>
